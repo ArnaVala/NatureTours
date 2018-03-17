@@ -1,0 +1,22 @@
+{
+  "name": "natours",
+  "version": "1.0.0",
+  "description": "landing page for natours",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArnaVala/NatureTours.git"
+  },
+  "author": "Vala",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArnaVala/NatureTours/issues"
+  },
+  "homepage": "https://github.com/ArnaVala/NatureTours#readme",
+  "devDependencies": {
+    "node-sass": "^4.7.2"
+  }
+}
