@@ -1,0 +1,15 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; //set root font size -set to % of 16px for user accessibility 10/16px DEFINES WHAT 1REM IS
+}
+
+body {
+    box-sizing: border-box;
+}
