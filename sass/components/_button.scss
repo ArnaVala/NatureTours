@@ -1,19 +1,24 @@
 .btn {
+    &,//add this to add simply btn without pseudocl
     &:link,
     &:visited {
         text-transform: uppercase;
         text-decoration: none;
-        font-size: 1.6rem;
+        font-size: $default-font-size;
         padding: 1.5rem 4rem;
         display: inline-block;
         border-radius: 10rem;
         transition: all .2s;
         position: relative;
+
+        //change for the <button> element
+        border: none;
+        cursor: pointer;
     }
 
     &:hover {
         transform: translateY(-0.3rem);
-        box-shadow: 0 1rem 2rem rgba($color-black,.2);
+        box-shadow: 0 1rem 2rem rgba($color-white,.2);
 
         &::after {
             transform: scaleX(1.5) scaleY(1.5);
@@ -21,7 +26,9 @@
         }
     }
 
-    &:active {
+    &:active,
+    &:focus {
+        outline: none;
         transform: translateY(-0.1rem);
         box-shadow: 0 0.5rem 1rem rgba($color-black,.2);
     }
@@ -48,8 +55,43 @@
         }
     }
 
+    &--green {
+        background-color: $color-primary;
+        color: $color-white;
+
+        &::after {
+            background-color: $color-white;
+        }
+    }
+
     &--animated {
         animation: moveInBottom .5s ease-out .75s;
         animation-fill-mode: backwards; /*so it is not visible in beginning*/
     }
 }
+
+.btn-text {
+    &:link,
+    &:visited {
+        font-size: $default-font-size;
+        color: $color-primary;
+        display:inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid $color-primary;
+        padding: .3rem;
+        transition: all .2s;
+    }
+
+    &:hover {
+        background-color: $color-primary;
+        color: $color-white;
+        box-shadow: 0 1rem 2rem rgba($color-black,.15);
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        box-shadow: 0 .5rem 1rem rgba($color-black,.15);
+        transform: translateY(0px);
+    }
+}
+
